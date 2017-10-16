@@ -3,10 +3,12 @@ services:
   web:
     build: .
     command: apache2-foreground
+    env_file:
+      - .env
     ports:
       - "8080:80"
     volumes:
-      - ./src:/var/www
+      - .:/var/www
     links:
       - db
   db:

@@ -11,12 +11,7 @@
 |
 */
 
-$app->get('/', function() use ($app) {
-    return response()->json([
-        'version' => $app->version(),
-        'time' => (new \DateTime())->format('d/m/Y h:i:s e'),
-    ]);
-});
+require __DIR__.'/info.php';
 
 $app->get('/users', function () use ($app) {
     $users = App\Models\User::all();

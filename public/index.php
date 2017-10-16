@@ -30,14 +30,3 @@ $app = require __DIR__.'/../bootstrap/app.php';
 
 
 $app->run();
-
-
-
-
-/*
-if (app()->environment('local')) {
-    $end_time = microtime(TRUE);
-    $sp = $end_time - $start_time;
-    echo sprintf('<br><br>%f ms - %f req/s', $sp * 1000, 1 / $sp);
-}
-*/
